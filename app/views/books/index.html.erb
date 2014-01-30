@@ -6,7 +6,9 @@
 
 <div>
 	<p>Title: <%= book.title %> <br /> 
-	Author: <%= book.author %>
+	Author: <%= book.author %> <br />
+	<%= link_to "Show book", books_path(@book) %>
+
 	</p>
 </div>
 
