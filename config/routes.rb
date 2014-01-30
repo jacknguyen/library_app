@@ -4,7 +4,11 @@ LibraryApp::Application.routes.draw do
   get "books" => "books#index"
   get "books/new" => "books#new"
   post "books" => "books#create"
-  get "books/:id" => "books#show"
+  get "books/:id" => "books#show", as: :book
+  get "books/:id/edit" => "books#edit"
+  patch "books/:id" => "books#update"
+  put "books/:id" => "books#update"
+
 
   # You can have the root of your site routed with "root"
   root 'books#index'
