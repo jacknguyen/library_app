@@ -9,7 +9,7 @@ class BooksController < ApplicationController
 	def create
 		@books = Book.new(book_param)
 
-		if @book.save
+		if @books.save
 			redirect_to action: 'index'
 			flash[:notice] = 'Book was added succesfully!'
 		else
